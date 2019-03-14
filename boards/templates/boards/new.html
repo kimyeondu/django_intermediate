@@ -1,7 +1,7 @@
 {% extends 'boards/base.html' %}
 {% block body %}
     <h1>New</h1>
-    <form action="{% url 'boards:create' %}" method="post">
+    <form action="{% url 'boards:new' %}" method="post">
         {% csrf_token %}
         <label for="title">TITLE</label>
         <input type="text" name="title" id="title"/><br>
@@ -11,4 +11,5 @@
     </form>
     <a href="{% url 'boards:index' %}">BACK</a>
 {% endblock %}
- 
+
+<!--form action이 없으면 자기 자신의 위치=>post방식으로 보냄-->
