@@ -1,7 +1,23 @@
 {% extends 'boards/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href={% static 'boards/stylesheets/index.css' %}>
+{% endblock %}
 {% block body %}
     <h1>Index</h1>
-    <a href="{% url 'boards:new'%}">글 작성하기</a>
+    <a href="{% url 'boards:new'%}">글 작성하기</a> <br>
+    <marquee behavior=alternate width="100%" scrollamount="300" class='text-danger mx-auto'>★반짝★</marquee>
+    <h1 class='text-light text-center'>★~ 욘두의 블로그에 오신걸 화녕합니다 ~★</h1>    
+    <h2 class='text-primary text-center'>아래는 짱짱 커여운 저랑 똑닮은 뗑컨이에양! 넘모 기엽져? 저랑 똑같져?</h2>
+    <img class='mx-auto mt-3 d-block' src={% static 'boards/images/penguin.jpg' %}>
+    <marquee behavior=alternate width="100%" scrollamount="450" class='text-danger mx-auto'>☆반짝☆</marquee>
+    <h1 class = text-primary><marquee direction="RIGHT" scrollamount="20"> __@/``</marquee></h1>
+    <h2 class = text-warning><marquee direction="RIGHT" scrollamount="5"> __@/``</marquee></h2>
+    <h2 class = text-light><marquee direction="RIGHT" scrollamount="7"> __@/``</marquee></h2>
+    <h1 class='text-success text-center'>앗! 예랑이가 욘두의 블로그에 놀러왔네양! 어디까지 걸어갈까여!?</h1>
+    <h2 class = 'text-secondary text-center'>그리고 제가 제일 좋아하는 캐릭터는 욘두에양★!</h2>
+    <h2 class = 'text-warning text-center'>혹시 우리 욘두님을 모르는 무지렁이는 없으시겠죠!? 그래더 헉시 머르니 욘두님이 누군지 이미지를 올려둘게양!</h2>
+    <!--<img class='mx-auto mt-3 d-block' src={% static 'boards/images/yondu.jpg' %}>-->
     <hr>
     {% for board in boards %}
         <p>{{ board.pk }}</p>
